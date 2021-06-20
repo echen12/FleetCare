@@ -1,0 +1,19 @@
+{
+  "name": "fleetcare",
+  "version": "1.0.0",
+  "description": "FleetCare back end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echen12/FleetCare.git"
+  },
+  "author": "Edmond Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/echen12/FleetCare/issues"
+  },
+  "homepage": "https://github.com/echen12/FleetCare#readme"
+}
