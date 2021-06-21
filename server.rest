@@ -1,0 +1,7 @@
+POST http://localhost:3001/vehicle-info
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Toyota"
+}
