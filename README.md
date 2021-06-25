@@ -1,4 +1,4 @@
-<img src="./images/Capture.png">
+![](./images/Capture.png)
 
 # [View The Live Site For FleetCare!](https://aqueous-stream-64202.herokuapp.com/)  
 
