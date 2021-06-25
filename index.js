@@ -4,6 +4,7 @@ const app = express()
 const cors = require('cors')
 const Vehicle = require('./models/vehicleInfo')
 
+
 app.use(express.json())
 app.use(cors())
 app.use(express.static('build'))
@@ -18,7 +19,7 @@ app.get('/api/vehicle-info', (request, response) => {
 })
 
 // get all vehicles
-app.get('/vehicle-info', async (request, response) => {
+app.get('/vehicle-info', (request, response) => {
     Vehicle.find({}).then(vehicle => {
         response.json(vehicle)
     })
@@ -40,7 +41,7 @@ app.delete('/vehicle-info/:id', (request, response) => {
 })
 
 // add vehicle
-app.post('/vehicle-info', async (request, response) => {
+app.post('/vehicle-info', (request, response) => {
 
     if (!request.body.vin) {
         return response.status(400).json({
@@ -51,7 +52,7 @@ app.post('/vehicle-info', async (request, response) => {
     const vehicle = new Vehicle(request.body)
 
     vehicle.save().then(result => {
-        response.json(result.body)
+        response.json(request.body)
     })
 
 })
@@ -64,6 +65,6 @@ app.put('/vehicle-info/:id', (request, response) => {
 
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT)
 console.log(`Server running on port ${PORT}`)
