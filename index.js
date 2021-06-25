@@ -65,13 +65,13 @@ app.put('/vehicle-info/:id', (request, response) => {
 
 })
 
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, './build/index.html'), function (err) {
-        if (err) {
-            res.status(500).send(err)
-        }
-    })
-}) 
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname, './build/index.html'), function (err) {
+//         if (err) {
+//             res.status(500).send(err)
+//         }
+//     })
+// }) 
 
 const PORT = process.env.PORT
 app.listen(PORT)
