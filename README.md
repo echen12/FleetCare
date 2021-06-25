@@ -1,4 +1,4 @@
-![ScreenShot](./images/Capture.png)
+<img src="./images/Capture.PNG" height="250" width="250">
 
 # [View The Live Site For FleetCare!](https://aqueous-stream-64202.herokuapp.com/)  
 
