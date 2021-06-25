@@ -51,7 +51,7 @@ app.post('/vehicle-info', async (request, response) => {
     const vehicle = new Vehicle(request.body)
 
     vehicle.save().then(result => {
-        response.json(result)
+        response.json(result.body)
     })
 
 })
