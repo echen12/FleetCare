@@ -6,6 +6,8 @@ const Vehicle = require('./models/vehicleInfo')
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('build'))
+
 
 
 // get api
