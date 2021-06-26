@@ -12,36 +12,36 @@ app.use(express.static('build'))
 
 
 // get api
-app.get('/api/vehicle-info', (request, response) => {
-    Vehicle.find({}).then(vehicle => {
+app.get('/api/vehicle-info', async (request, response) => {
+    await Vehicle.find({}).then(vehicle => {
         response.json(vehicle)
     })
 })
 
 // get all vehicles
-app.get('/vehicle-info', (request, response) => {
-    Vehicle.find({}).then(vehicle => {
+app.get('/vehicle-info', async (request, response) => {
+    await Vehicle.find({}).then(vehicle => {
         response.json(vehicle)
     })
 })
 
 // get one vehicle
-app.get('/vehicle-info/:id', (request, response) => {
-    Vehicle.findById(request.params.id).then(vehicle => {
+app.get('/vehicle-info/:id', async (request, response) => {
+    await Vehicle.findById(request.params.id).then(vehicle => {
         response.json(vehicle)
     })
 })
 
 // delete one vehicle
-app.delete('/vehicle-info/:id', (request, response) => {
+app.delete('/vehicle-info/:id', async (request, response) => {
     const id = request.params.id
-    Vehicle.findByIdAndDelete(id).then(data => {
+    await Vehicle.findByIdAndDelete(id).then(data => {
         response.json(data)
     })
 })
 
 // add vehicle
-app.post('/vehicle-info', (request, response) => {
+app.post('/vehicle-info', async (request, response) => {
 
     if (!request.body.vin) {
         return response.status(400).json({
@@ -51,15 +51,15 @@ app.post('/vehicle-info', (request, response) => {
 
     const vehicle = new Vehicle(request.body)
 
-    vehicle.save().then(result => {
+    await vehicle.save().then(result => {
         response.json(request.body)
     })
 
 })
 
 // update vehicle details
-app.put('/vehicle-info/:id', (request, response) => {
-    Vehicle.findByIdAndUpdate(request.params.id, request.body).then(result => {
+app.put('/vehicle-info/:id', async (request, response) => {
+    await Vehicle.findByIdAndUpdate(request.params.id, request.body).then(result => {
         response.json(request.body)
     })
 
