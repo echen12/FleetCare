@@ -1,7 +1,7 @@
-POST http://localhost:3001/vehicle-info
+POST http://localhost:3001/users
 Content-Type: application/json
 
-{
-    "make": "Toyota",
-    "model": "Toyota"
+{ 
+    "username": "try", 
+    "password": "try"
 }
