@@ -22,7 +22,7 @@
 4. [Future Implementations](#future-implementations)
 ***
 
-## Technology Used
+## Technologies Used
 * MongoDB
 * Express
 * React
