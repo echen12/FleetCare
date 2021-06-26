@@ -3,6 +3,9 @@
 # [View The Live Site For FleetCare!](https://aqueous-stream-64202.herokuapp.com/)  
 
 * Please note! This website was hosted on Heroku. Please give a few seconds for the website to load!<br>
+* View the front end [here](https://github.com/echen12/FleetCare-FrontEnd)
+* view the JSON API [here](https://fleetcare.herokuapp.com/api/vehicle-info)
+
 ***
 
 ## Brief Description
